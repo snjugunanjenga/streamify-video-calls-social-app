@@ -197,3 +197,5 @@ export const LANGUAGE_TO_ICON = {
   dart: "🎯",
   scala: "🔥",
 };
+
+export const LANGUAGE_TO_FLAG = LANGUAGE_TO_ICON;
