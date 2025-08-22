@@ -162,36 +162,38 @@ export const THEMES = [
   },
 ];
 
-export const LANGUAGES = [
-  "English",
-  "Spanish",
-  "French",
-  "German",
-  "Mandarin",
-  "Japanese",
-  "Korean",
-  "Hindi",
-  "Russian",
-  "Portuguese",
-  "Arabic",
-  "Italian",
-  "Turkish",
-  "Dutch",
+// Programming languages instead of spoken languages
+export const PROGRAMMING_LANGUAGES = [
+  "JavaScript",
+  "TypeScript",
+  "Python",
+  "Java",
+  "C++",
+  "C#",
+  "Go",
+  "Rust",
+  "Ruby",
+  "PHP",
+  "Swift",
+  "Kotlin",
+  "Dart",
+  "Scala",
 ];
 
-export const LANGUAGE_TO_FLAG = {
-  english: "gb",
-  spanish: "es",
-  french: "fr",
-  german: "de",
-  mandarin: "cn",
-  japanese: "jp",
-  korean: "kr",
-  hindi: "in",
-  russian: "ru",
-  portuguese: "pt",
-  arabic: "sa",
-  italian: "it",
-  turkish: "tr",
-  dutch: "nl",
+// Optional mapping to icons / identifiers (instead of flags)
+export const LANGUAGE_TO_ICON = {
+  javascript: "🟨", // JS yellow square
+  typescript: "🟦", // TS blue square
+  python: "🐍",
+  java: "☕",
+  "c++": "💻",
+  "c#": "🎵",
+  go: "🐹",
+  rust: "🦀",
+  ruby: "💎",
+  php: "🐘",
+  swift: "🦅",
+  kotlin: "📱",
+  dart: "🎯",
+  scala: "🔥",
 };
