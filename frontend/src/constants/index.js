@@ -162,8 +162,7 @@ export const THEMES = [
   },
 ];
 
-// Programming languages instead of spoken languages
-export const PROGRAMMING_LANGUAGES = [
+export const LANGUAGES = [
   "JavaScript",
   "TypeScript",
   "Python",
@@ -180,10 +179,9 @@ export const PROGRAMMING_LANGUAGES = [
   "Scala",
 ];
 
-// Optional mapping to icons / identifiers (instead of flags)
 export const LANGUAGE_TO_FLAG = {
-  javascript: "🟨", // JS yellow square
-  typescript: "🟦", // TS blue square
+  javascript: "🟨",
+  typescript: "🟦",
   python: "🐍",
   java: "☕",
   "c++": "💻",
@@ -197,4 +195,3 @@ export const LANGUAGE_TO_FLAG = {
   dart: "🎯",
   scala: "🔥",
 };
-
