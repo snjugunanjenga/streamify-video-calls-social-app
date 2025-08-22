@@ -17,7 +17,9 @@ const __dirname = path.resolve();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173",
+            "https://plp-streamify-learning.onrender.com"
+            ], 
     credentials: true, // allow frontend to send cookies
   })
 );
