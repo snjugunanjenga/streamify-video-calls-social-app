@@ -181,7 +181,7 @@ export const PROGRAMMING_LANGUAGES = [
 ];
 
 // Optional mapping to icons / identifiers (instead of flags)
-export const LANGUAGE_TO_ICON = {
+export const LANGUAGE_TO_FLAG = {
   javascript: "🟨", // JS yellow square
   typescript: "🟦", // TS blue square
   python: "🐍",
@@ -198,4 +198,3 @@ export const LANGUAGE_TO_ICON = {
   scala: "🔥",
 };
 
-export const LANGUAGE_TO_FLAG = LANGUAGE_TO_ICON;
