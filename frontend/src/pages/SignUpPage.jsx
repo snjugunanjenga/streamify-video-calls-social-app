@@ -59,7 +59,7 @@ const SignUpPage = () => {
                 <div>
                   <h2 className="text-xl font-semibold">Create an Account</h2>
                   <p className="text-sm opacity-70">
-                    Join Streamify and start your language learning adventure!
+                    Join Streamify and start your programming-language learning adventure!
                   </p>
                 </div>
 
@@ -155,9 +155,9 @@ const SignUpPage = () => {
             </div>
 
             <div className="text-center space-y-3 mt-6">
-              <h2 className="text-xl font-semibold">Connect with language partners worldwide</h2>
+              <h2 className="text-xl font-semibold">Connect with your programming-language partners worldwide</h2>
               <p className="opacity-70">
-                Practice conversations, make friends, and improve your language skills together
+                Practice conversations, make friends, and improve your programming-language skills together
               </p>
             </div>
           </div>

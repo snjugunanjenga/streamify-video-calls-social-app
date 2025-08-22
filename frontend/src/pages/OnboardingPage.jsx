@@ -112,7 +112,7 @@ const OnboardingPage = () => {
               {/* NATIVE LANGUAGE */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Native Language</span>
+                  <span className="label-text">Native Programming-Language</span>
                 </label>
                 <select
                   name="nativeLanguage"
@@ -132,7 +132,7 @@ const OnboardingPage = () => {
               {/* LEARNING LANGUAGE */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Learning Language</span>
+                  <span className="label-text">Learning Programming-Language</span>
                 </label>
                 <select
                   name="learningLanguage"
@@ -140,7 +140,7 @@ const OnboardingPage = () => {
                   onChange={(e) => setFormState({ ...formState, learningLanguage: e.target.value })}
                   className="select select-bordered w-full"
                 >
-                  <option value="">Select language you're learning</option>
+                  <option value="">Select Programming-language you're learning</option>
                   {LANGUAGES.map((lang) => (
                     <option key={`learning-${lang}`} value={lang.toLowerCase()}>
                       {lang}
