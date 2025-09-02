@@ -61,6 +61,7 @@ export async function acceptFriendRequest(requestId) {
 
 export async function getStreamToken() {
   const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/chat/token`, {
+    method: "GET",
     credentials: "include",
   });
   if (!res.ok) throw new Error("Failed to fetch Stream token");
