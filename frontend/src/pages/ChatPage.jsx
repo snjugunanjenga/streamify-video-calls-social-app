@@ -19,8 +19,6 @@ import toast from "react-hot-toast";
 import ChatLoader from "../components/ChatLoader";
 import CallButton from "../components/CallButton";
 
-const STREAM_API_KEY = import.meta.env.VITE_STREAM_API_KEY;
-
 const ChatPage = () => {
   const { id: targetUserId } = useParams();
 
@@ -33,17 +31,18 @@ const ChatPage = () => {
   const { data: tokenData } = useQuery({
     queryKey: ["streamToken"],
     queryFn: getStreamToken,
-    enabled: !!authUser, // this will run only when authUser is available
+    enabled: !!authUser, // only run when authUser is available
   });
 
   useEffect(() => {
     const initChat = async () => {
-      if (!tokenData?.token || !authUser) return;
+      if (!tokenData?.token || !tokenData?.apiKey || !authUser) return;
 
       try {
         console.log("Initializing stream chat client...");
 
-        const client = StreamChat.getInstance(STREAM_API_KEY);
+        // use apiKey from backend, not frontend .env
+        const client = StreamChat.getInstance(tokenData.apiKey);
 
         await client.connectUser(
           {
@@ -54,12 +53,7 @@ const ChatPage = () => {
           tokenData.token
         );
 
-        //
         const channelId = [authUser._id, targetUserId].sort().join("-");
-
-        // you and me
-        // if i start the chat => channelId: [myId, yourId]
-        // if you start the chat => channelId: [yourId, myId]  => [myId,yourId]
 
         const currChannel = client.channel("messaging", channelId, {
           members: [authUser._id, targetUserId],
@@ -112,4 +106,5 @@ const ChatPage = () => {
     </div>
   );
 };
+
 export default ChatPage;
