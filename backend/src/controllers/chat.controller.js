@@ -12,7 +12,7 @@ export async function getStreamToken(req, res) {
     res.status(200).json({
       token,
       apiKey: process.env.STREAM_API_KEY, // send to frontend
-      userId: String(userId),
+      userId: req.userId,
     });
   } catch (error) {
     console.error("Error in getStreamToken controller:", error.message);

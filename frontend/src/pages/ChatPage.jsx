@@ -36,10 +36,13 @@ const ChatPage = () => {
 
   useEffect(() => {
     const initChat = async () => {
-      if (!tokenData?.token || !tokenData?.apiKey || !authUser) return;
+      if (!tokenData?.token || !tokenData?.apiKey || !authUser) {
+        console.warn("Missing tokenData or authUser", tokenData, authUser);
+        return;
+      } 
 
       try {
-        console.log("Initializing stream chat client...");
+        console.log("Initializing stream chat client...", tokenData.apiKey);
 
         // use apiKey from backend, not frontend .env
         const client = StreamChat.getInstance(tokenData.apiKey);
